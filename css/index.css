@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+}
+body{
+    background: black;
+    color: white;
+}
+.game-container,.start-container{
+    position: relative;
+    box-sizing: content-box;
+    height: 600px;
+    width: 590px;
+    border: 1px solid green;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.game-container{display: none}
+.start-container{
+    background: url("../image/bg.jpg");
+    background-size: cover;
+    width: 390px;
+    padding-top: 290px;
+    box-sizing: border-box;/*对内压缩高度*/
+}
+.game-main-panel{
+    position: absolute;
+    height: 100%;
+    width: 390px;
+    left: 100px;
+    top:0px;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
+}
+.time-panel{
+    position: absolute;
+    top:0;left: 0;
+    width: 100px;height: 100px;
+}
+.help-panel{
+    position: absolute;
+    top:150px;
+    left: 0;
+    width: 100px;
+}
+.level-panel{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+}
+.next-panel{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+}
+.setting-panel{
+    position: absolute;
+    top:150px;
+    right: 0;
+    width: 100px;
+}
+.score-panel{
+    position: absolute;
+    right: 0;
+    bottom: 120px;
+    width: 100px;
+}
+.high-score-panel{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+}
+.panel-header{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    font-size: 10px;
+    color: #ffffff;
+    background-color: orange;
+}
+.panel-body{
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+}
+.help-panel .panel-body,.setting-panel .panel-body{
+    line-height: normal;
+}
+.time-panel,.next-panel,.score-panel{
+    border-bottom: 1px solid green;
+}
+.start-container p{
+    text-align: center;
+    margin-top: 30px;
+}
+.start-container p button{
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: 微软雅黑;
+    border: 0;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    background-color: gray;
+}
+.start-container p button:hover{
+    background-color: coral;
+}
+.model-dialog{
+    display: none;
+}
+.model-dialog .model-body{
+    position: fixed;
+    height: 300px;
+    width: 390px;
+    top:50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -195px;
+    background: black;
+    z-index: 10;text-align: center;
+}
+.model-dialog::after{
+    content: "";
+    position:fixed;
+    top:0;right: 0;bottom: 0;left: 0;background-color: rgba(255,255,255,0.3);
+}
+html { overflow-y:hidden }
